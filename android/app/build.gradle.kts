@@ -25,7 +25,7 @@ android {
         minSdk = 23
         targetSdk = 35
         versionCode = 6
-        versionName = "1.0.6"
+        versionName = "1.0.6git remote add origin https://github.com/seu-usuario/seu-repositorio.git"
     }
 
     signingConfigs {
