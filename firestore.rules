@@ -1,0 +1,62 @@
+rules_version = '2';
+service cloud.firestore {
+    match /databases/{database}/documents {
+
+        // Função para verificar se o usuário logado é responsável pelo aluno
+        function isResponsavelOf(alunoId) {
+            let resp = get(/databases/$(database)/documents/responsaveis/$(request.auth.uid)).data;
+            return resp != null && resp.filhos.contains(alunoId);
+        }
+
+        // Usuário só vê/escreve seu próprio perfil de login
+        match /users/{userId} {
+            allow read, write: if request.auth.uid == userId;
+        }
+
+        // Alunos: aluno vê seu registro; responsável vê apenas os registros de seus filhos
+        match /alunos/{alunoId} {
+            allow read: if request.auth.uid == alunoId || isResponsavelOf(alunoId);
+            allow write: if false;
+
+            // Subcoleção de notificações do aluno
+            match /notificacoes/{notifId} {
+                allow read: if request.auth.uid == alunoId;
+                // Apenas o próprio aluno pode marcar como lida
+                allow update: if request.auth.uid == alunoId
+                    && request.resource.data.lida == true;
+                allow create, delete: if false;
+            }
+        }
+
+        // Responsáveis só acessam seu próprio documento
+        match /responsaveis/{respId} {
+            allow read, write: if request.auth.uid == respId;
+        }
+
+        // Turmas: leitura por qualquer usuário autenticado
+        match /turmas/{turmaId} {
+            allow read: if request.auth != null;
+            allow write: if false;
+        }
+
+        // Tarefas: aluno ou seu responsável podem ler
+        match /tarefas/{docId} {
+            allow read: if resource.data.alunoUid == request.auth.uid
+                || isResponsavelOf(resource.data.alunoUid);
+            allow write: if false;
+        }
+
+        // Notas: igual às tarefas
+        match /notas/{docId} {
+            allow read: if resource.data.alunoUid == request.auth.uid
+                || isResponsavelOf(resource.data.alunoUid);
+            allow write: if false;
+        }
+
+        // Qualquer outra rota fica negada
+        match /{document=**} {
+            allow read, write: if false;
+        }
+    }
+}
+

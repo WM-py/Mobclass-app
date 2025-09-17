@@ -1,0 +1,52 @@
+name: agenda_digital
+
+description: "Aplicativo de agenda digital escolar"
+publish_to: 'none'
+
+version: 1.0.6+6
+
+environment:
+  sdk: ">=3.7.2 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  flutter_modular: ^5.0.3
+  url_launcher: ^6.1.14
+  rxdart: ^0.27.7
+
+  # Firebase
+  firebase_core: ^2.25.4
+  firebase_messaging: ^14.7.10
+  firebase_auth: ^4.17.4
+  cloud_firestore: ^4.15.6
+
+  # Outros
+  intl: ^0.18.1
+  flutter_local_notifications: ^19.1.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.1
+
+  # Gerador de ícones de app
+  flutter_launcher_icons: ^0.13.1
+
+flutter_launcher_icons:
+  android: true
+  ios: false
+  image_path: "assets/logo_mobclassapp.png"
+  adaptive_icon_background: "#FFFFFF"
+  adaptive_icon_foreground: "assets/logo_mobclassapp.png"
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/logo.png
+    - assets/logo_mobclassapp.png
+
+
+

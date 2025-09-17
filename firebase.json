@@ -1,0 +1,30 @@
+{
+  "flutter": {
+    "platforms": {
+      "android": {
+        "default": {
+          "projectId": "agenda-digital-e481b",
+          "appId": "1:88928166311:android:b409f6b81d1b6a8376d682",
+          "fileOutput": "android/app/google-services.json"
+        }
+      },
+      "dart": {
+        "lib/firebase_options.dart": {
+          "projectId": "agenda-digital-e481b",
+          "configurations": {
+            "android": "1:88928166311:android:b409f6b81d1b6a8376d682",
+            "ios": "1:88928166311:ios:d46e2a1d192f6d1b76d682",
+            "macos": "1:88928166311:ios:d46e2a1d192f6d1b76d682",
+            "web": "1:88928166311:web:f5703e7f09e2e37276d682",
+            "windows": "1:88928166311:web:7b8ca21132d46ef576d682"
+          }
+        }
+      }
+    }
+  },
+  "firestore": {
+    "rules": "firestore.rules",
+    "indexes": "firestore.indexes.json"
+  }
+}
+

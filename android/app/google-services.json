@@ -1,0 +1,67 @@
+{
+  "project_info": {
+    "project_number": "88928166311",
+    "project_id": "agenda-digital-e481b",
+    "storage_bucket": "agenda-digital-e481b.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:88928166311:android:ce78ec5eff1d274176d682",
+        "android_client_info": {
+          "package_name": "com.android.application"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDkT6ekOHDBmsAsplEdPVXYoTtp1Blw2dw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:88928166311:android:b409f6b81d1b6a8376d682",
+        "android_client_info": {
+          "package_name": "com.example.agenda_digital"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDkT6ekOHDBmsAsplEdPVXYoTtp1Blw2dw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:88928166311:android:d176b63abf24f48676d682",
+        "android_client_info": {
+          "package_name": "com.mobclass.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDkT6ekOHDBmsAsplEdPVXYoTtp1Blw2dw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

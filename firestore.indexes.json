@@ -1,0 +1,93 @@
+{
+  "indexes": [
+    {
+      "collectionGroup": "agenda",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "turmaId",   "order": "ASCENDING" },
+        { "fieldPath": "diaSemana", "order": "ASCENDING" },
+        { "fieldPath": "ordem",     "order": "ASCENDING" }
+      ]
+    },
+    {
+      "collectionGroup": "agenda",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "turmaId",   "order": "ASCENDING" },
+        { "fieldPath": "diaSemana", "order": "ASCENDING" },
+        { "fieldPath": "horario",   "order": "ASCENDING" }
+      ]
+    },
+    {
+      "collectionGroup": "agenda",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "turmaId",   "order": "ASCENDING" },
+        { "fieldPath": "diaSemana", "order": "ASCENDING" },
+        { "fieldPath": "turno",     "order": "ASCENDING" },
+        { "fieldPath": "horario",   "order": "ASCENDING" }
+      ]
+    },
+    {
+      "collectionGroup": "comunicados",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "turmaId", "order": "ASCENDING" },
+        { "fieldPath": "data",    "order": "DESCENDING" }
+      ]
+    },
+    {
+      "collectionGroup": "frequencias",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "alunoId", "order": "ASCENDING" },
+        { "fieldPath": "data",    "order": "DESCENDING" }
+      ]
+    },
+    {
+      "collectionGroup": "notas",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "alunoUid",       "order": "ASCENDING" },
+        { "fieldPath": "bimestre",       "order": "ASCENDING" },
+        { "fieldPath": "dataLancamento", "order": "DESCENDING" }
+      ]
+    },
+    {
+      "collectionGroup": "notas",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "alunoUid",       "order": "ASCENDING" },
+        { "fieldPath": "bimestre",       "order": "ASCENDING" },
+        { "fieldPath": "materiaId",      "order": "ASCENDING" },
+        { "fieldPath": "dataLancamento", "order": "DESCENDING" }
+      ]
+    },
+    {
+      "collectionGroup": "tarefas",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "turmaId",    "order": "ASCENDING" },
+        { "fieldPath": "dataEntrega","order": "ASCENDING" }
+      ]
+    },
+    {
+      "collectionGroup": "notas",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "turmaId",        "order": "ASCENDING" },
+        { "fieldPath": "alunoUid",       "order": "ASCENDING" },
+        { "fieldPath": "bimestre",       "order": "ASCENDING" },
+        { "fieldPath": "dataLancamento", "order": "DESCENDING" }
+      ]
+    }
+  ],
+  "fieldOverrides": []
+}
+
+
+
+
+
+
+
